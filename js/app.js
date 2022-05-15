@@ -51,7 +51,7 @@ function showNotes() {
     notesObj = JSON.parse(notes);
   }
   let html = "";
-  console.log(titles)
+  //console.log(titles);
   notesObj.forEach(function (element, index) {
     html += `
             <div class="noteCard my-2 mx-2 card" style="width: 18rem; height: fit-content;">

@@ -1,0 +1,11 @@
+.cardTitle input {
+    width: 100%;
+    padding: 15px 25px;
+}
+.btn-outline-success {
+    color: white;
+    border-color: white;
+}
+.cardTitle{
+    margin-bottom: 2em;
+}

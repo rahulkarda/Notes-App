@@ -3,25 +3,47 @@
 console.log("Welcome to notes app. This is app.js");
 showNotes();
 
+// getting title from the user
+
+
 // If user adds a note, add it to the localStorage
 let addBtn = document.getElementById("addBtn");
 addBtn.addEventListener("click", function (e) {
   let addTxt = document.getElementById("addTxt");
+  let addTitle = document.getElementById('addTitle');
   let notes = localStorage.getItem("notes");
+  let titles = localStorage.getItem('titles');
+  if(titles == null){
+    titlesObj = [];
+  }
+  else{
+    titlesObj = JSON.parse(titles);
+  }
   if (notes == null) {
     notesObj = [];
   } else {
     notesObj = JSON.parse(notes);
   }
   notesObj.push(addTxt.value);
+  titlesObj.push(addTitle.value);
   localStorage.setItem("notes", JSON.stringify(notesObj));
+  localStorage.setItem("titles", JSON.stringify(titlesObj));
+  addTitle.value = '';
   addTxt.value = "";
+  
   //   console.log(notesObj);
   showNotes();
 });
 
 // Function to show elements from localStorage
 function showNotes() {
+  let titles = localStorage.getItem('titles');
+  if(titles == null){
+    titlesObj = [];
+  }
+  else{
+    titlesObj = JSON.parse(titles);
+  }
   let notes = localStorage.getItem("notes");
   if (notes == null) {
     notesObj = [];
@@ -29,11 +51,12 @@ function showNotes() {
     notesObj = JSON.parse(notes);
   }
   let html = "";
+  console.log(titles)
   notesObj.forEach(function (element, index) {
     html += `
             <div class="noteCard my-2 mx-2 card" style="width: 18rem; height: fit-content;">
                     <div class="card-body">
-                        <h5 class="card-title">Note ${index + 1}</h5>
+                        <h5 class="card-title">${titlesObj[index]}</h5>
                         <p class="card-text"> ${element}</p>
                         <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
                     </div>
@@ -79,6 +102,8 @@ search.addEventListener("input", function () {
     // console.log(cardTxt);
   });
 });
+
+
 
 /*
 Further Features:

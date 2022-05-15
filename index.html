@@ -10,12 +10,7 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <style>
-        .btn-outline-success {
-            color: white;
-            border-color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -51,6 +46,11 @@
         <h2>Welcome to Notes App</h2>
         <div class="card">
             <div class="card-body">
+                <div class="cardTitle">
+                    <h5>Add a Title</h5> 
+                    <input id="addTitle" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+
+                </div>
                 <h5 class="card-title">Add a note</h5>
                 <!-- <h6 class="title">Add Title</h6> -->
                 <!-- <input id="noteTitle" type="text"> -->

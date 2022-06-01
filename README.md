@@ -30,7 +30,7 @@ When I will improve this project, I would start by updating the UI to be respons
       3. Sync and host to web server 
               
 ## Lessons Learned
-My learning was focused on making the use of Web Storage API and to create a simple UI and a smooth UX for the users to create notes in browser itself.
-Seperation of Concerns - separating the application into distinct sections, so each section addresses a separate concern. Learned how the web storage API works and difference between local storage and session storage. 
+My learning was focused on making the use of Web Storage API and to create a simple UI and a smooth UX for the users to create notes in the browser itself.
+Seperation of Concerns - Separating the application into distinct sections, so each section addresses a separate concern. Learned how the web storage API works and difference between local storage and session storage. 
 
 
